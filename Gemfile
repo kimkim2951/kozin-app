@@ -60,4 +60,7 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
 gem 'bootstrap'
+
 gem 'jquery-rails'
+gem 'rails-i18n'
+gem 'devise-i18n'
