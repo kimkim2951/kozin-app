@@ -16,7 +16,25 @@
 
  .container-login {
   @extend .container-fluid;
-  max-width: 576px;
+  max-width: 580px;
+  padding: 2rem;
+}
+
+.tweet-create {
+  @extend .container-fluid;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.tweet-index {
+  @extend .container-fluid;
+  max-width: 850px;
+  padding: 2rem;
+}
+
+.picture-size {
+  @extend .container-fluid;
+  max-width: 600px;
   padding: 2rem;
 }
 

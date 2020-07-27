@@ -1,0 +1,28 @@
+.tweet-create
+  .d-flex.align-items-center
+    %h1 新規投稿
+    .ml-auto.posts_button
+      %a.btn.btn-outline-info{href: "/posts"} 投稿一覧
+  = form_for @tweet do |f|
+    .form-group
+      .form-group
+      %label{for: "text1"} 投稿タイトル
+      %input#text1.form-control{type: "text", :novalidate => ""}/
+      %small#poster-tip.form-text.text-muted
+        タイトルを入力してください。
+    .form-group
+      %label{for: "textarea1"} 投稿内容
+      %textarea#textarea1.form-control
+      %small.form-text.text-muted{id: "content-tip\"", :novalidate => ""}
+        投稿内容を入力してください。
+    %form
+      %label{for: "picture"} 投稿写真
+      .form-group
+        .custom-file
+          %input#customFile.custom-file-input{type: "file",lang: "ja"}/
+          %label.custom-file-label{for: "customFile"} ファイルを選択...
+          %small.form-text.text-muted{id: "content-tip\""}
+            写真を選択してください。
+    = f.submit '投稿', class: 'btn btn-info btn-block'
+    %small#submit-tip.form-text.text-muted
+
