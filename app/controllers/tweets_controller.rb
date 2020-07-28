@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweer_params)
+    Tweet.create(tweet_params)
   end
 
   def destroy
@@ -34,7 +34,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:name, :image, :text)
+    params.require(:tweet).permit(:title, :image, :text)
   end
 
   def set_tweet
