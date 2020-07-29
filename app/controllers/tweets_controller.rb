@@ -11,8 +11,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    binding.pry
-    Tweet.create(text: params[:text])
+    Tweet.create(tweet_params)
   end
 
   def destroy
@@ -35,7 +34,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:title, :image, :text)
+    params.require(:tweet).permit(:title, :image, :text).merge(user_id: current_user.id)
   end
 
   def set_tweet
