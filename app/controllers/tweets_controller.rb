@@ -1,9 +1,9 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :show]
-  #before_action :move_to_index, except: [:index, :show]
+  #before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -32,6 +32,14 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
   end
 
+  def search
+    @tweets = Tweet.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+  
   private
   def tweet_params
     params.require(:tweet).permit(:title, :image, :text).merge(user_id: current_user.id)

@@ -11,12 +11,9 @@
     .form-group
       %label 投稿内容
       = f.text_area :text, class: "Textarea1 form-control",rows: "10", placeholder: "投稿内容"
-      //%textarea.Textarea1.form-control{placeholder: "投稿内容"}
       %small#emailHelp.form-text.text-muted 投稿内容を入力してください。
     .form-group
       %label 写真投稿
       = f.file_field :image, class: "form-control-file", type: "file"
-      //%input.form-control-file{type: "file"}/
       %small.form-text.text-muted 写真を選択してください。
     = f.submit nil, class: "btn btn-primary"
-    //%button.btn.btn-primary{type: "submit"}送信
