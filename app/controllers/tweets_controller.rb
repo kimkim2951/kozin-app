@@ -11,7 +11,8 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweet_params)
+    binding.pry
+    Tweet.create(text: params[:text])
   end
 
   def destroy
