@@ -35,7 +35,7 @@
     .row
       - @tweets.each do |tweet|
         .col-md-4
-          .card.mb-4.shadow-
+          .card.mb-4
             .image-box
               = image_tag tweet.image.url, class: 'bd-placeholder-img card-img-top thumnail' if tweet.image.present?
             .card-body
@@ -48,4 +48,4 @@
                     =link_to "編集", edit_tweet_path(tweet.id), {method: "get",class: "btn btn-sm btn-outline-secondary"}
                     =link_to "削除", tweet_path(tweet.id), {method: "delete",class: "btn btn-sm btn-outline-secondary"}
 
-.p-top= paginate(@tweets)
+=paginate(@tweets)
