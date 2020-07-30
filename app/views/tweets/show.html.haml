@@ -3,47 +3,23 @@
     %h1 投稿詳細
     .ml-auto.posts_button
       %a.btn.btn-outline-info{href: "/"} 投稿一覧 
-  .card.mb-4.shadow-
-    .show-image-box
-    -# = image_tag tweet.image.url, class: 'show-image' if tweet.image.present?
-  = form_with(model: @tweet, local: true) do |f|
+    .card.mb-4.shadow-
+      .content_post{style: "background-image: url(#{@tweet.image});"}
     .form-group
-      %label コメント
-      = f.text_area :text, class: "Textarea1 form-control",rows: "10", placeholder: "投稿内容"
-      %small#emailHelp.form-text.text-muted コメントを入力してください。
-    = f.submit nil, class: "btn btn-primary"
-
-.contents.row
-  .content_post{style: "background-image: url(#{@tweet.image});"}
-    - if user_signed_in? && current_user.id == @tweet.user_id
-      .more
-        %span= image_tag 'arrow_top.png'
-        %ul.more_list
-          %li
-            = link_to '編集', edit_tweet_path(@tweet.id), method: :get
-          %li
-            = link_to '削除', tweet_path(@tweet.id), method: :delete
-    %p= @tweet.text
-    %span.name
-      %a{href: "/users/#{@tweet.user.id}"}
-        %span 投稿者
-        = @tweet.user.nickname
-  .container
-    - if current_user
-      = form_with(model: [@tweet, @comment], local: true) do |form|
-        = form.text_area :text, placeholder: "コメントする", rows: "2"
-        = form.submit "SEND"
-    - else
-      %strong
-        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
-    .comments
-      %h4 ＜コメント一覧＞
-      - if @comments
-        - @comments.each do |comment|
-          %p
-            %strong
-              = link_to comment.user.nickname, "/users/#{comment.user_id}"
-              ：
-            = comment.text
-= form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
-  = form.text_area :text, placeholder: "コメントする" , rows: "2", class: "textbox"
+      - if current_user
+        = form_with(model: [@tweet, @comment], local: true) do |f|
+          %label ＜コメント投稿＞
+          = f.text_area :text, class: "Textarea1 form-control", rows: "3", placeholder: "コメントする"
+          %small#emailHelp.form-text.text-muted コメントを入力してください。
+          = f.submit nil, class: "btn btn-primary"
+      - else
+        %strong
+          %p ~~~ コメントを投稿するには新規登録／ログインが必要です ~~~
+      .comments
+        %label ＜コメント一覧＞
+        - if @comments
+          - @comments.each do |comment|
+            %p
+              %strong
+                = link_to comment.user.name, "/users/#{comment.user_id}"
+              = comment.text

@@ -48,19 +48,4 @@
                     =link_to "編集", edit_tweet_path(tweet.id), {method: "get",class: "btn btn-sm btn-outline-secondary"}
                     =link_to "削除", tweet_path(tweet.id), {method: "delete",class: "btn btn-sm btn-outline-secondary"}
 
-%nav{"aria-label": "Page navigation example"}
-  %ul.pagination.justify-content-center
-    %li.page-item
-      %a.page-link{"aria-label": "Previous", href: "#"}
-        %span{"aria-hidden": "true"} «
-        %span.sr-only Previous
-    %li.page-item
-      %a.page-link{href: "#"} 1
-    %li.page-item
-      %a.page-link{href: "#"} 2
-    %li.page-item
-      %a.page-link{href: "#"} 3
-    %li.page-item
-      %a.page-link{"aria-label": "Next", href: "#"}
-        %span{"aria-hidden": "true"} »
-        %span.sr-only Next
+.p-top= paginate(@tweets)

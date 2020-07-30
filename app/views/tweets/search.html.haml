@@ -13,9 +13,8 @@
       - @tweets.each do |tweet|
         .col-md-4
           .card.mb-4.shadow-
-            %svg.bd-placeholder-img.card-img-top{}
-              %title Placeholder
-              %rect{fill: "#55595c", height: "100%", width: "100%"}
+            .image-box
+              = image_tag tweet.image.url, class: 'bd-placeholder-img card-img-top thumnail' if tweet.image.present?
             .card-body
               %p.card-text
                 = tweet.title
