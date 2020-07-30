@@ -1,3 +1,18 @@
+.tweet-create
+  .d-flex.align-items-center
+    %h1 投稿詳細
+    .ml-auto.posts_button
+      %a.btn.btn-outline-info{href: "/"} 投稿一覧 
+  .card.mb-4.shadow-
+    .show-image-box
+    -# = image_tag tweet.image.url, class: 'show-image' if tweet.image.present?
+  = form_with(model: @tweet, local: true) do |f|
+    .form-group
+      %label コメント
+      = f.text_area :text, class: "Textarea1 form-control",rows: "10", placeholder: "投稿内容"
+      %small#emailHelp.form-text.text-muted コメントを入力してください。
+    = f.submit nil, class: "btn btn-primary"
+
 .contents.row
   .content_post{style: "background-image: url(#{@tweet.image});"}
     - if user_signed_in? && current_user.id == @tweet.user_id
@@ -32,4 +47,3 @@
             = comment.text
 = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
   = form.text_area :text, placeholder: "コメントする" , rows: "2", class: "textbox"
-  = form.submit "SEND", class: "form__submit"

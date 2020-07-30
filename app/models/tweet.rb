@@ -6,7 +6,10 @@ class Tweet < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   def self.search(search)
-    return Tweet.all unless search
-    Tweet.where('text LIKE(?)', "%#{search}%")
+    if search
+      Tweet.where('text LIKE(?)', "%#{search}%")
+    else
+      Tweet.all
+    end
   end
 end
