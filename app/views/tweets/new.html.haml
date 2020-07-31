@@ -6,14 +6,14 @@
   = form_with(model: @tweet, local: true) do |f|
     .form-group
       %label 投稿タイトル
-      = f.text_field :title, class: "form-control", placeholder: "タイトル"
+      = f.text_field :title, class: "form-control", placeholder: "タイトル", required: true, minlength: @title_length, maxlength: '30'
       %small#emailHelp.form-text.text-muted タイトルを入力してください。
     .form-group
       %label 投稿内容
-      = f.text_area :text, class: "Textarea1 form-control",rows: "10", placeholder: "投稿内容"
+      = f.text_area :text, class: "Textarea1 form-control",rows: "10", placeholder: "投稿内容", required: true, minlength: @text_length, maxlength: '500'
       %small#emailHelp.form-text.text-muted 投稿内容を入力してください。
     .form-group
       %label 写真投稿
-      = f.file_field :image, class: "form-control-file", type: "file"
-      %small.form-text.text-muted 写真を選択してください。
+      = f.file_field :image, class: "form-control-file bs-custom-file-input", type: "file"
+      %small.form-text.text-muted 写真を選択してください。(ファイルをドロップする事も出来ます。)
     = f.submit nil, class: "btn btn-primary"
