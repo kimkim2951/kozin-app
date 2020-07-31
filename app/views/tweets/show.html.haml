@@ -1,24 +1,24 @@
 .tweet-create
   .show
     .d-flex.justfy-content-space-between
-      %h1 投稿詳細
+      %h1.bg-info.rounded.text-white 投稿詳細
       .ml-auto.posts_button
         %a.btn.btn-outline-info{href: "/"} 投稿一覧 
     .card.mb-4
       = image_tag "#{@tweet.image}", class: 'bd-placeholder-img card-img-top'
-      %h5 投稿内容
+      %h5.bg-info.rounded.text-white 投稿内容
       %p.card-text
         = @tweet.text
     .form-group
       - if current_user
-        = form_with(model: [@tweet, @comment], local: true) do |f|
-          %label ＜コメント投稿＞
-          = f.text_area :text, class: "Textarea1 form-control", rows: "3", placeholder: "コメントする"
+        = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |f|
+          %label.bg-info.rounded.text-white ＜コメント投稿＞
+          = f.text_area :text, class: "Textarea1 form-control textbox", rows: "3", placeholder: "コメントする"
           %small#emailHelp.form-text.text-muted コメントを入力してください。
-          = f.submit nil, class: "btn btn-primary"
+          = f.submit nil, class: "btn btn-primary form__submit"
       - else
         %strong
-          %p ~~~ コメントを投稿するには新規登録／ログインが必要です ~~~
+          %p.bg-info.rounded.text-white.text-center ~~~ コメントを投稿するには新規登録／ログインが必要です ~~~
       .comments
         %label ＜コメント一覧＞
         - if @comments
