@@ -49,3 +49,26 @@
                     =link_to "削除", tweet_path(tweet.id), {method: "delete",class: "btn btn-sm btn-outline-secondary"}
 
 =paginate(@tweets)
+
+%h1 楽天検索
+.content
+  #search-box
+    = form_with url: tweets_path, method: 'get', local: true do |f|
+      = f.text_field :keyword, placeholder: "キーワードを打ち込んでください"
+      = f.submit "検索", class: "btn btn-primary"
+  %h2 検索結果
+%table
+  %thead
+    %tr
+      %th 商品名
+      %th 価格
+      %th 画像
+  %tbody
+    - if @items.present?
+      - @items.each do |item|
+        %tr
+          %td= link_to item.name, "#{item.url}"
+          %td{align: "right"}
+            = number_with_delimiter(item.price)
+            円
+          -# %td= image_tag item["smallImageUrls"][0]["imageUrl"]

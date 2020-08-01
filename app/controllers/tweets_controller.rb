@@ -3,8 +3,15 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
+    @items_array = []
     @tweets = Tweet.includes(:user).order("created_at DESC")
     @tweets = Tweet.page(params[:page]).per(9)
+    if params[:keyword]
+      @items = RakutenWebService::Ichiba::Item.search(keyword: params[:keyword])
+      @items.each do |item|
+        @items_array.push(item)
+      end
+    end
   end
 
   def new
