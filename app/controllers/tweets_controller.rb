@@ -40,14 +40,11 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
   end
 
-  def self.search(search)
-    if search
-      Tweet.where('title LIKE(?)', "%#{search}%")
-    else
-      Tweet.all
-    end
+  def search
+    @tweets = Tweet.search(params[:keyword])
+    @tweets = Tweet.page(params[:page]).per(9)
   end
-  
+
   private
   def tweet_params
     params.require(:tweet).permit(:title, :image, :text).merge(user_id: current_user.id)
