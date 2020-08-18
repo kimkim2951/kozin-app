@@ -40,8 +40,12 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
   end
 
-  def search
-    @tweets = Tweet.search(params[:keyword])
+  def self.search(search)
+    if search
+      Tweet.where('title LIKE(?)', "%#{search}%")
+    else
+      Tweet.all
+    end
   end
   
   private

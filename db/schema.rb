@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 2020_07_29_093704) do
     t.text "title"
     t.text "text"
     t.text "image"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
     t.index ["text"], name: "index_tweets_on_text", length: 32
   end
 
