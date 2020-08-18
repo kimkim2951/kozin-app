@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: kozin_app_production
-  username: kozin_app
-  password: <%= ENV['KOZIN_APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
