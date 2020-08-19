@@ -41,29 +41,28 @@
                     =link_to "編集", edit_tweet_path(tweet.id), {method: "get",class: "btn btn-sm btn-outline-secondary"}
                     =link_to "削除", tweet_path(tweet.id), {method: "delete",class: "btn btn-sm btn-outline-secondary"}
 
-=paginate(@tweets)
+  =paginate(@tweets)
 
-%h1 楽天検索
-.content
-  #search-box
-    = form_with url: tweets_path, method: 'get', local: true do |f|
-      = f.text_field :keyword, placeholder: "キーワードを打ち込んでください"
-      = f.submit "検索", class: "btn btn-primary"
-  %h2 検索結果
-%table
-  %thead
-    %tr
-      %th 商品名
-      %th 価格
-      %th 画像
-  %tbody
-    - if @items.present?
-      - @items.each do |item|
-        /- binding.pry
-        %tr
-          %td= link_to item['itemName']
-          %td{align: "right"}
-            = item['itemPrice']
-            円
-          %td=image_tag item["smallImageUrls"][0]
-          -# %td= image_tag item["smallImageUrls"][0]["imageUrl"]
+  %h1.text-center.text-white.bg-danger ↓↓気になる缶詰があれば楽天で検索↓↓
+  .content.text-right
+    #search-box.w-100
+      = form_with url: tweets_path, method: 'get', local: true do |f|
+        = f.text_field :keyword, placeholder: "検索したい商品を入力してください", class: "form-control mr-sm-2."
+        = f.submit "検索", class: "btn btn-primary"
+    %h2.text-center 検索結果
+
+  %table.table.table-striped
+    %thead
+      %tr
+        %th{scope: "col"} 商品名
+        %th{scope: "col"} 価格
+        %th{scope: "col"} 商品画像
+      %tbody
+      - if @items.present?
+        - @items.each do |item|
+          %tr
+            %td= link_to item['itemName']
+            %td{align: "right"}
+              = item['itemPrice']
+              円
+            %td=image_tag item["smallImageUrls"][0]
