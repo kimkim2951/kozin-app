@@ -42,7 +42,6 @@ class TweetsController < ApplicationController
 
   def search
     @tweets = Tweet.search(params[:keyword])
-    @tweets = Tweet.page(params[:page]).per(9)
   end
 
   private
