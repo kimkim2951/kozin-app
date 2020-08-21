@@ -30,7 +30,7 @@
 
 ## サイトURL紹介
 - ユーザー名:kimkim2951
-- IPアドレス:https://github.com/kimkim2951/git-app
+- IPアドレス:https://kozin-app.herokuapp.com/ 
 
 ## インストール方法
 1.このリポジトリを複製<br>
