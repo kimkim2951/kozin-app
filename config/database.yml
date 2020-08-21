@@ -10,16 +10,18 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
+  timeout: 5000
+  encoding: utf8
+  username:
   password:
-  socket: /tmp/mysql.sock
+  host: localhost
 
 development:
   <<: *default
-  database: kozin_app_development
+  # database: db/development.sqlite3 変更
+  database: kozin-app
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -49,6 +51,6 @@ test:
 #
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  database: kozin-app
+  username: kimura
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %> 
