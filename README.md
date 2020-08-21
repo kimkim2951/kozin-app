@@ -10,6 +10,7 @@
 
 - 作成期間 7/25〜8/3 (10日間)
 ![top_page](https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9)
+<a><img src="https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9" /></a>
 
 
 ## :paperclip: 主な使用言語
