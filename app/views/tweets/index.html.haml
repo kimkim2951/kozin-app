@@ -61,7 +61,7 @@
       - if @items.present?
         - @items.each do |item|
           %tr
-            %td= link_to item['itemName']
+            %td= link_to item.name, "#{item.url}"
             %td{align: "right"}
               = item['itemPrice']
               円
