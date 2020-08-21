@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string "email", default: "", null: false
       t.string "encrypted_password", default: "", null: false
       t.string "reset_password_token"
-      t.string "name"
+      t.string "name", default: "", null: false
       t.datetime "reset_password_sent_at"
       t.datetime "remember_created_at"
       t.index ["email"], name: "index_users_on_email", unique: true
