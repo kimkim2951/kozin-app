@@ -9,7 +9,7 @@
 - 「良い商品」には日の目をみて欲しい、実際に使ったユーザー感想を共有して欲しい、最終的には商品に込めた「想い」が伝わると嬉しいと考えこのアプリケーションを作りました。
 
 - 作成期間 7/25〜8/3 (10日間)
-[![Image from Gyazo](https://i.gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9.gif)](https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9)
+ ![top_page](https://i.gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9.gif)
 
 
 ## :paperclip: 主な使用言語
