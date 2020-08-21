@@ -52,5 +52,5 @@ test:
 production:
   <<: *default
   database: kozin-app
-  username: kimura
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %> 
+  username: 
+  password: 
