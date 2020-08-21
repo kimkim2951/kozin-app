@@ -2,12 +2,14 @@
 <h1 align="center">缶詰投稿アプリ（缶交大使）</h1>
 
 ## アプリ概要
-- 缶詰の写真・詳細投稿アプリです。自分のお気に入りの缶詰を投稿して情報をシェアする事が出来ます。
+- 缶詰の投稿アプリです。自分のお気に入りの缶詰を投稿して情報をシェアする事が出来ます。
 ## コンセプト
-- 
+- 情報発信のアプリケーションを作ろうと考えました。
+- スーパーに並んでいる良く見かける商品意外にも、世の中にはこだわり品で美味しい商品がたくさんあります。
+- 「良い商品」には日の目をみて欲しい、実際に使ったユーザー感想を共有して欲しい、最終的には商品に込めた「想い」が伝わると嬉しいと考えこのアプリケーションを作りました。
 
 - 作成期間 7/25〜8/3 (10日間)
-　![top_page](https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9)
+![top_page](https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9)
 
 
 ## :paperclip: 主な使用言語
@@ -48,9 +50,9 @@
 ## tweetsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|string||
+|title|string|null: false|
 |image|text||
-|text|text||
+|text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
