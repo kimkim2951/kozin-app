@@ -10,8 +10,7 @@
 
 - 作成期間 7/25〜8/3 (10日間)
 
-![demo](https://gyazo.com/https://i.gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9.gif/raw)
- <!-- <a>![top_page](https://i.gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9.gif)](https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9)</a> -->
+ <a>![top_page](https://i.gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9.gif)](https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9)</a>
 
 <!-- [![Image from Gyazo](https://i.gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9.gif)](https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9) -->
 
