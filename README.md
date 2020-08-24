@@ -6,13 +6,12 @@
 ## コンセプト
 - 情報発信のアプリケーションを作ろうと考えました。
 - スーパーに並んでいる良く見かける商品意外にも、世の中にはこだわり品で美味しい商品がたくさんあります。
-- 「良い商品」には日の目をみて欲しい、実際に使ったユーザー感想を共有して欲しい、最終的には商品に込めた「想い」が伝わると嬉しいと考えこのアプリケーションを作りました。
+- 「良い商品」には日の目を見て欲しい、実際に使ったユーザーに感想を共有して情報発信して欲しい、
+- 最終的には商品に込めた「想い」が伝わると嬉しいと考えこのアプリケーションを作りました。
 
 - 作成期間 7/25〜8/3 (10日間)
 
  <a>![72ea2ccb18baa5b7eb6463e3eea4a2b9](https://user-images.githubusercontent.com/67769876/91044382-28881300-e650-11ea-865b-3defa2c95202.gif)</a>
- <!-- <a>![top_page](https://i.gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9.gif)](https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9)</a> -->
-<!-- [![Image from Gyazo](https://i.gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9.gif)](https://gyazo.com/72ea2ccb18baa5b7eb6463e3eea4a2b9) -->
 
 ## :paperclip: 主な使用言語
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
@@ -20,6 +19,8 @@
 <a><img src="https://user-images.githubusercontent.com/39142850/71774618-b32edb80-2fb5-11ea-9050-d5929a49e9a5.png" height="60px;" /></a> <!-- Hamlのロゴ -->
 <a><<img src="https://user-images.githubusercontent.com/39142850/71774644-115bbe80-2fb6-11ea-822c-568eabde5228.png" height="60px" /></a> <!-- Scssのロゴ -->
 <a><img src="https://user-images.githubusercontent.com/39142850/71774768-d064a980-2fb7-11ea-88ad-4562c59470ae.png" height="65px;" /></a> <!-- jQueryのロゴ -->
+<a><img src="https://user-images.githubusercontent.com/67769876/91068711-a0196a80-e66f-11ea-9e03-92d97eef5736.png" height="65px;" /></a> <!-- herokuのロゴ -->
+
 
 
 ## 機能紹介
