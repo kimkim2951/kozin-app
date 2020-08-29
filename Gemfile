@@ -71,3 +71,6 @@ gem 'devise-i18n'
 gem 'kaminari'
 gem 'rakuten_web_service'
 gem 'pg'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
