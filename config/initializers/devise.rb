@@ -37,6 +37,8 @@ Devise.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
+  config.omniauth :facebook,ENV['966586893827921'],ENV['37303e97de1a3addc4c0f1056f1ce12d']
+  config.omniauth :google_oauth2,ENV['1070550839516-olfpnetkmlt6jqb4vrv3l8rnvlc5ea41.apps.googleusercontent.com'],ENV['Jb7t4d2B1AnoXgcDYp8aPojf']
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -267,8 +269,6 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :get
-  config.omniauth :facebook,ENV['966586893827921'],ENV['37303e97de1a3addc4c0f1056f1ce12d']
-  config.omniauth :google_oauth2,ENV['1070550839516-olfpnetkmlt6jqb4vrv3l8rnvlc5ea41.apps.googleusercontent.com'],ENV['Jb7t4d2B1AnoXgcDYp8aPojf']
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
