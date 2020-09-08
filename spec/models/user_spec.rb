@@ -4,7 +4,9 @@ describe User do
   describe '#create' do
     # 1. nicknameとemail、passwordとpassword_confirmationが存在すれば登録できること
     it "is valid with a nickname, email, password, password_confirmation" do
+      # user = User.new(nickname: "kimu", email: "kkk@gmail.com", password: "00000000", password_confirmation: "00000000")
       user = build(:user)
+      user.valid?
       expect(user).to be_valid
     end
 
@@ -12,7 +14,7 @@ describe User do
     it "is invalid without a nickname" do
       user = build(:user, nickname: nil)
       user.valid?
-      expect(user.errors[:nickname]).to include("can't be blank")
+      expect(user.errors[:nickname]).not_to include("can't be blank", "is too long (maximum is 6 character)")
     end
 
     # 3. emailが空では登録できないこと
