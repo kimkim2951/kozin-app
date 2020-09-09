@@ -73,3 +73,4 @@ gem 'devise-i18n'
 gem 'kaminari'
 gem 'rakuten_web_service'
 gem 'pg'
+gem "aws-sdk-s3", require: false
