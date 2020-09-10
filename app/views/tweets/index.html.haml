@@ -7,12 +7,12 @@
         %li{"data-slide-to": "1", "data-target": "#main_visual"}
       .carousel-inner
         .carousel-item.active
-          %img.img-fluid{alt: "缶詰写真", src: "/assets/缶詰一覧2.jpg"}/
+          = image_tag asset_path('缶詰一覧2.jpg'), class: "img-fluid"
           .carousel-caption.d-md-block
             %h1 好きな缶詰投稿してみませんか
             %p 缶詰は、味・保存性・栄養素が全て揃った人類の最高傑作です。是非自分の好きな缶詰を共有しましょう
         .carousel-item
-          %img.img-fluid{alt: "缶詰写真", src: "/assets/みかん缶のコピー.jpg"}/
+          = image_tag asset_path('みかん缶のコピー.jpg'), class: "img-fluid"
           .carousel-caption.d-md-block
             %h1.text-dark 缶詰の可能性は無限大
             %p.text-dark そのまま食べるもよし。一手間加えて食べるもよし。缶詰の魅力をUPさせる食べ方を紹介して、缶詰好きの輪を広げましょう
