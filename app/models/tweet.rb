@@ -4,6 +4,7 @@ class Tweet < ApplicationRecord
   has_many :comments
 
   mount_uploader :image, ImageUploader
+  
 
   def self.search(search)
     if search
