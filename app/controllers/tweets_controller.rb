@@ -4,8 +4,8 @@ class TweetsController < ApplicationController
 
   def index
     @items_array = []
-    @tweets = Tweet.includes(:user).order("created_at DESC")
-    @tweets = Tweet.page(params[:page]).per(9)
+    @tweets = Tweet.includes(:user)
+    @tweets = Tweet.page(params[:page]).per(9).order("created_at DESC")
     if params[:keyword]
       @items = RakutenWebService::Ichiba::Item.search(keyword: params[:keyword])
       @items.each do |item|
