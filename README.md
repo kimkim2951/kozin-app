@@ -11,7 +11,7 @@
 
 - 作成期間 7/25〜8/3 (10日間)
 
- <a>![72ea2ccb18baa5b7eb6463e3eea4a2b9](https://user-images.githubusercontent.com/67769876/91044382-28881300-e650-11ea-865b-3defa2c95202.gif)</a>
+ <a>![個人アプリトップ](https://user-images.githubusercontent.com/67769876/93284844-830b2e00-f80e-11ea-9d95-8049d44472ae.gif)</a>
 
 ## :paperclip: 主な使用言語
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
